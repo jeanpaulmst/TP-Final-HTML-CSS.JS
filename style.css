@@ -1,0 +1,198 @@
+/*===GENERALES===*/
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: "Lato", sans-serif;
+}
+
+/*===HEADER===*/
+.container__principalHeader{
+  height: 8vh;
+  background-color: rgb(67, 67, 151); 
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container__contentHeader{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+  
+}
+
+.inputAndSearchButton{
+  display: flex;
+  gap: 10px;
+}
+
+.inputHeader{
+  border: none;
+  padding: 0.4rem;
+  width: 20vw;
+  font-size: 2vh;
+  border-radius: 3px;
+  
+}
+
+.buttonSearch{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid white;
+  color: white;
+  padding: 0.4rem;
+  width: 8vw;
+  font-size: 2vh;
+  border-radius: 3px;
+  background-color: rgb(67, 67, 151);
+
+  gap: 10%;
+}
+
+.buttonAddElement{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid white;
+  color: white;
+  padding: .4rem;
+  font-size: 2vh;
+  width: 18vw;
+  background-color: rgb(67, 67, 151);
+  border-radius: 3px;
+  
+  gap: 10%;
+}
+
+.buttonSearch:hover{
+  cursor: pointer;
+  background-color: rgb(134, 134, 183);
+}
+.buttonAddElement:hover{
+  cursor: pointer;
+  background-color: rgb(134, 134, 183);
+}
+
+/*===MAIN===*/
+.container__view{
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+}
+
+.list{
+  background-color: rgb(122, 134, 171);
+  height: 92vh;
+}
+
+.store{
+  background-color: rgb(160, 170, 199);
+  height: 92vh;
+}
+
+/*===LISASIDE=== */
+.listAside{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  gap: 2%;
+}
+
+.listAside h2 {
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.listAside ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2vh;
+}
+
+.listAside ul li{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.listAside li:hover{
+  cursor: pointer;
+}
+
+.liActive{                                /*Estaría bueno dejar esto más lindo*/
+  background-color: rgb(67, 67, 151);
+  color: white;
+}
+
+
+/*===FUENTES===*/
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
