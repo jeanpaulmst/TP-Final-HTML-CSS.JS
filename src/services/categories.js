@@ -16,6 +16,8 @@ export const renderCategories = () =>{
 
     //añadimos dinámicamente el evento click
     const liElements = ulList.querySelectorAll("li");
+    liElements.item("Todos").classList.add("liActive") //Setear por defecto "Todos"
+
     liElements.forEach((liElement) => {
         liElement.addEventListener("click", ()=>{
             console.log("click en", liElement.id);
@@ -37,5 +39,5 @@ export const renderCategories = () =>{
             }
         });
     }
-
+    return liElements;
 };

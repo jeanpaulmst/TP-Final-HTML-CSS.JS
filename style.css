@@ -94,10 +94,63 @@
 /*===STORE===*/
 .store{
   background-color: rgb(160, 170, 199);
-  height: 92vh;
+  /*height: 92vh;*/
+  height: 100%;
+}
+.sectionStore{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1vw;
+  margin-top: 5vh;
+}
+.sectionStore h3{
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+.sectionStore img {
+  height: 30vh;
+  width: 30vh;
+}
+.containerSectionProducts{
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 0.5fr);
+  background-color: rgb(135, 147, 181);
+  width: 100%;
+  border-radius: 0.4rem;
+  margin-right: 2vh;
+  
+
+}
+.storeProduct{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  background-color: rgb(138, 134, 188);
+  box-shadow: 5px 5px;
+  border-radius: .4rem;
+  height: 50vh;
+  width: 20vw;
+  margin-bottom: 4vh;;
+  margin-top: 4vh;
+  margin-left: 2vw;
+  transition: transform 0.3s ease;
+}
+.storeProduct:hover{
+  cursor: pointer;
+  transform: scale(1.08);
 }
 
-/*===LISASIDE=== */
+
+
+
+
+/*===LISTASIDE=== */
 .listAside{
   display: flex;
   align-items: center;

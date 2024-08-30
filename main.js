@@ -1,7 +1,12 @@
 import { renderCategories } from "./src/services/categories.js";
 import { setInLocalStorage } from "./src/services/localStorage.js";
+import { handleGetProductsToStore } from "./src/views/store.js";
 
-renderCategories();
+//import "./style.css"
+
+/*===APLICACIÓN===*/
+renderCategories();  //Renderiza y devuelve lista de filtros
+handleGetProductsToStore();
 
 
 /*===PRODUCT===*/ 
@@ -57,6 +62,7 @@ const handleSaveOrModifyProduct = ()=>{
   };
   console.log(object);
   setInLocalStorage(object);
-  //closeModal();
+  handleGetProductsToStore();
+  closeModal();
 }
 

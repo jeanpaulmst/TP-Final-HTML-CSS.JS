@@ -9,9 +9,9 @@ export const handleGetProductLocalStorage = () => {
 
 //guardar en localStorage
 
-//recibir un producto
 export const setInLocalStorage = (productIn) => {
     if (productIn) {
+
         //Traer los elementos guardados
         let productsInLocal = handleGetProductLocalStorage();
         console.log(productIn);
