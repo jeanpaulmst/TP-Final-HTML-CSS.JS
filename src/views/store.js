@@ -48,7 +48,7 @@ export const handleRenderList = (productsIn) => {
 
     //renderizar cada uno de los productos en su categoría correspondiente
     const appContainer = document.getElementById("storeContainer");     //Nivel del contenedor de la store
-   appContainer.innerHTML = `                                          
+    appContainer.innerHTML = `                                          
     ${renderProductGroup(burgers, "Hamburguesas")}
     ${renderProductGroup(papas, "Papas")}
     ${renderProductGroup(gaseosas, "Gaseosas")}

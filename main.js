@@ -5,6 +5,13 @@ import { handleGetProductsToStore } from "./src/views/store.js";
 //import "./style.css"
 
 /*===APLICACIÓN===*/
+
+export let activeCategory = null;
+export const setActiveCategory = (categoryIn) =>{
+  activeCategory = categoryIn;
+}
+
+
 renderCategories();  //Renderiza y devuelve lista de filtros
 handleGetProductsToStore();
 
@@ -26,6 +33,12 @@ const openModal = ()=>{
 
 
 /*===POPUP===*/
+
+//guardar producto activo si se presionó
+export let productoActivo;
+export const setProductoActivo = (idProductoIn) =>{
+  productoActivo = idProductoIn;
+}
 
 //Cerrar PopUp -- "Agregar o modificar producto"
 const buttonCancel = document.getElementById("cancelButton");
