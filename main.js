@@ -1,6 +1,9 @@
 import { renderCategories } from "./src/services/categories.js";
-import { setInLocalStorage } from "./src/services/localStorage.js";
+import { handleSaveOrModifyProduct } from "./src/services/products.js";
+import { handleButtonSearchByName } from "./src/services/searchBar.js";
+import { closeModal, openModal } from "./src/views/modal.js";
 import { handleGetProductsToStore } from "./src/views/store.js";
+
 
 //import "./style.css"
 
@@ -11,71 +14,37 @@ export const setActiveCategory = (categoryIn) =>{
   activeCategory = categoryIn;
 }
 
+export let activeProduct = null;
+export const setActiveProduct = (productIn) =>{
+  activeProduct = productIn;
+}
 
 renderCategories();  //Renderiza y devuelve lista de filtros
 handleGetProductsToStore();
 
 
-/*===PRODUCT===*/ 
-
-//Abrir PopUp -- "Agregar o modificar producto"
+//---HEADER---
+//agregar elemento
 const buttonAdd = document.getElementById("buttonAddElement");
 buttonAdd.addEventListener("click",()=>{
   openModal();
 
 });
 
-const openModal = ()=>{
-  const modal = document.getElementById("modalPopUp");
-  modal.style.display = "flex";
 
-}
+//botón de busqueda
+const buttonSearch = document.getElementById("buttonSearch");
+buttonSearch.addEventListener("click",()=>{
+  handleButtonSearchByName();
+})
 
 
-/*===POPUP===*/
 
-//guardar producto activo si se presionó
-export let productoActivo;
-export const setProductoActivo = (idProductoIn) =>{
-  productoActivo = idProductoIn;
-}
 
-//Cerrar PopUp -- "Agregar o modificar producto"
-const buttonCancel = document.getElementById("cancelButton");
-buttonCancel.addEventListener("click",()=>{
-  closeModal();
-});
 
-const closeModal = () =>{
-  const modal = document.getElementById("modalPopUp");
-  modal.style.display = "none";
 
-}
 
-//Guardar o modificar elementos
 
-const buttonAccept = document.getElementById("acceptButton");
-buttonAccept.addEventListener("click",()=>{
-  handleSaveOrModifyProduct();
 
-});
 
-const handleSaveOrModifyProduct = ()=>{
-  let productName = document.getElementById("nameInput").value;
-  let productPrice = document.getElementById("priceInput").value;
-  let productImage = document.getElementById("imageInput").value;
-  let productCategory = document.getElementById("categoria").value;
-
-  let object = {
-    id: new Date().toISOString(),
-    productName,
-    productPrice,
-    productImage,
-    productCategory,
-  };
-  console.log(object);
-  setInLocalStorage(object);
-  handleGetProductsToStore();
-  closeModal();
-}
 

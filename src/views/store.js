@@ -1,6 +1,9 @@
 /*=======STORE=======*/
 
+import { setActiveProduct } from "../../main";
 import { handleGetProductLocalStorage } from "../services/localStorage"
+import { openModal } from "./modal";
+
 
 //recupera los elementos guardados de la localStorage y llama a la función de renderizado
 export const handleGetProductsToStore = () => {
@@ -53,16 +56,18 @@ export const handleRenderList = (productsIn) => {
     ${renderProductGroup(papas, "Papas")}
     ${renderProductGroup(gaseosas, "Gaseosas")}
     `;  //Nivel del contenedor de cada categoría. Llama a la funcion para renderizar todos los elementos de la categoría
-    
-
 
     //Se pasa un arreglo de productos como parámetro. Se itera cada producto. Por cada uno de los productos se recupera
     //su elemento en el document y se define una función de click
     const addEvents = (productsIn) =>{
+       
         productsIn.forEach((element, index)=>{
             const productContainer = document.getElementById(`product-${element.productCategory}-${index}`);
             productContainer.addEventListener("click", ()=>{
                 console.log("productoActivo", element);
+                setActiveProduct(element);
+                openModal();
+
             });
         }); 
     };
